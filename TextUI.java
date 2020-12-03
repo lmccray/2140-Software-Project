@@ -74,12 +74,14 @@ public class TextUI {
             System.out.println("\n-------------KJ TRUCKING------------\n\n");
             System.out.println("1. User Management");
             System.out.println("2. Driver Management"); 
+            System.out.println("3. Truck Management");
             System.out.println("4. Report Management");
             /*System.out.println("d. Register a Death");
             System.out.println("e. Register a Marriage");
             System.out.println("f. Generate a Mailing Label");
             System.out.println("g. Search");*/
             System.out.println("5. Exit Application");
+            
 
             System.out.println("Enter choice:\n");
             choice=scan.next();
@@ -94,11 +96,11 @@ public class TextUI {
                 case "2":
                      DriverManagement();
                     break;
-                /*
-                case "c":
-                   updateCitizen();
-                   break;
                 
+                case "3":
+                   TruckManagement();
+                   break;
+                /*
                 case "d":
                     registerDeath();
                     break;
@@ -264,6 +266,43 @@ public class TextUI {
 
         User.AddAdmin(id, email, password);
         System.out.println("\nNew Admin successfully added to the system!");    
+    }
+
+    public void TruckManagement(){
+
+        while(!choice.equals("3")){
+            System.out.println("\n------------- TRUCK MANAGEMENT ------------\n");
+            System.out.println("1. Add Truck");
+            System.out.println("2. Update Truck");
+            System.out.println("3. Delete Truck");
+            System.out.println("4. Exit to Menu");
+            System.out.println("Enter choice:");
+            choice=scan.next();
+
+            switch(choice)
+            {
+            case "1":
+                AddDriver();
+                
+                break;
+          
+            case "2":
+                UpdateTruckInfo();
+                break;
+            
+            case "3":
+               DeleteDriver();
+               break;
+            
+            case "4":
+                System.out.println("Exiting to Menu...");
+                break;
+
+            }
+        }
+        
+
+
     }
 
     public void DriverManagement(){
